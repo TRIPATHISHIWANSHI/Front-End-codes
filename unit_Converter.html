@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+       }
+       body{
+        font-family:tahoma;
+        background-position: -16px -40px;
+     background-image:radial-gradient(purple ,black,purple);
+        
+       }
+       h1#heading{
+        text-align: center;
+        margin-top: 40px;
+        color:aquamarine;
+        font-size: 100px;
+       }
+       #container{
+        
+        margin:10px auto 0px auto;
+        width:80%;
+        text-align: center;
+        background-image: linear-gradient(to right,darkblue,cyan,darkgreen,lightgreen);
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: -2px 4px 25px black;
+        
+       }
+       .input-div{
+        display: inline-block;
+       }
+       .input{
+        padding: 5px 10px;
+        margin: 10px;
+        font-size: 30px;
+        font-weight: bold;
+        width: 200px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: inset -2px 2px 10px #000;
+        background-color: white;
+       }
+       label{
+        font-size: 20px;
+       }
+    </style>
+</head>
+<body>
+    <h1 id="heading">UNIT CONVERTER</h1>
+    <div id="container">
+        <div class="input-div">
+            <label>Feet</label><br>
+            <input type="'number" value="1" id="feet" class="input">
+        </div>
+        <div class="input-div">
+            <h1>=</h1>
+        </div>
+        <div class="input-div">
+            <label>Inches</label><br>
+            <input type="Number" value="12" id="inch" class="input">
+        </div>
+    </div>
+
+    <div id="container">
+        <div class="input-div">
+            <label>Metres</label><br>
+            <input type="'number" value="1" id="meter" class="input">
+        </div>
+        <div class="input-div">
+            <h1>=</h1>
+        </div>
+        <div class="input-div">
+            <label>Centimeter</label><br>
+            <input type="Number" value="100" id="centimeter" class="input">
+        </div>
+    </div>
+
+    <div id="container">
+        <div class="input-div">
+            <label>Kilogram</label><br>
+            <input type="'number" value="1" id="kg" class="input">
+        </div>
+        <div class="input-div">
+            <h1>=</h1>
+        </div>
+        <div class="input-div">
+            <label>Gram</label><br>
+            <input type="Number" value="1000" id="gram" class="input">
+        </div>
+    </div>
+
+    <div id="container">
+        <div class="input-div">
+            <label>Degree</label><br>
+            <input type="'number" value="1" id="degree" class="input">
+        </div>
+        <div class="input-div">
+            <h1>=</h1>
+        </div>
+        <div class="input-div">
+            <label>Fahreinhit</label><br>
+            <input type="Number"  value="33.8" id="fnht" class="input">
+        </div>
+    </div>
+
+    <script>
+        var feet=document.getElementById('feet');
+        var inch=document.getElementById('inch');
+        feet.addEventListener('input',function(){
+            let f=this.value;
+            let i=f*12;
+            inch.value=i;
+        });
+        inch.addEventListener('input',function(){
+            let i=this.value;
+            let f=i/12;
+            if(!Number.isInteger(f)){
+                f=f.toFixed(2);
+            };
+            feet.value=f;
+        });
+
+
+        var meter=document.getElementById('meter');
+        var centi=document.getElementById('centimeter');
+        meter.addEventListener('input',function(){
+            let m=this.value;
+            let cm=m*100;
+            centi.value=cm;
+        });
+        centi.addEventListener('input',function(){
+            let cm=this.value;
+            let m=cm/100;
+            if(!Number.isInteger(m)){
+                m=m.toFixed(2);
+            };
+            meter.value=m;
+        });
+
+        var kg=document.getElementById('kg');
+        var gram=document.getElementById('gram');
+        kg.addEventListener('input',function(){
+            let kilo=this.value;
+            let gm=kilo*1000;
+            gram.value=gm;
+        });
+        gram.addEventListener('input',function(){
+            let gm=this.value;
+            let kilo=gm/100;
+            if(!Number.isInteger(kilo)){
+                kilo=kilo.toFixed(2);
+            };
+            gram.value=kilo;
+        });
+
+
+        var degree=document.getElementById('degree');
+        var Fahreinhit=document.getElementById('fnht');
+        degree.addEventListener('input',function(){
+            let deg=this.value;
+            let fn=(((deg*9)/5)+32);
+            Fahreinhit.value=fn;
+        });
+        Fahreinhit.addEventListener('input',function(){
+            let fn=this.value;
+            let deg=(fn-32)*5/9;
+            if(!Number.isInteger(deg)){
+                deg=deg.toFixed(2);
+            };
+            degree.value=deg;
+        });
+
+    </script>
+</body>
+</html>

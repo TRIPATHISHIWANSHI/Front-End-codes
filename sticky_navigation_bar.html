@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #p1{
+            font-size: 25px;
+          color:darkslateblue;
+        }
+       
+        header{
+            text-align: center;
+            margin: 60px 0px;
+        }
+        nav{
+            text-align: center;
+            background-color:darkslateblue;
+            color:aliceblue;
+        }
+        nav ul{
+            list-style-type: none;
+
+        }
+        nav ul li{
+            display:inline-block;
+            font-size: 18px;
+            padding: 20px 15px;
+        }
+        #container{
+            text-align: center;
+            margin-top: 60px;
+        }
+        #container img{
+            width: 100%;
+            padding: 30px 0px;
+        }
+        .sticky{
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://th.bing.com/th/id/OIP.jlkmvp_f9dpWYR7MDMkANQAAAA?w=196&h=196&c=7&r=0&o=5&pid=1.7">
+        <h1>SHIWANSHI TRIPATHI</h1>
+    </header>
+    <nav id="menu-bar" class="sticky">
+        <ul>
+            <li>HOME</li>
+            <li>PROJECT</li>
+            <li>GALLERY</li>
+            <li>ABOUT US</li>
+            <li>CONTACT US</li>
+        </ul>
+    </nav>
+    <div is="container">
+        <h1>About Us</h1>
+        <img src="https://i.pinimg.com/736x/56/51/34/5651343b2dcda1e5fc903bd1764650b6.jpg">
+        <p id="p1">Google is a multinational technology company that focuses on various services and products that are related to the internet like online advertising, cloud computing, searching, hardware and software.
+            <br>
+            Google has been one of the first companies to really understand the need for employees to have a flexible schedule and work on their terms 
+            to unleash their creativity and a greater level of productivity. They've let their employees explore how they'd 
+            like to work and given them the freedom within the environment to approach work in a way that suits them.
+<br>
+            Google has really teased out the most fun parts of working intech and amplified those to the maximum. It gives people a chance 
+            to solve huge problems while delivering people the most important resource they can have: information. They are a little irreverent with recreation and generous with perks. 
+            Those things always increase employee happiness, which has a direct relationship with productivity.
+           <br> 
+            Google is just a fun place and doesn't feel like work. That is difficult to achieve in a company where employees often work long 
+            days and even weekends. However, with the perks, environment, and flexibility on where employees can work, Google has managed to 
+            create a very creative and enjoyable workplace. 
+<br>
+            You have to love a company that encourages you to bring your dog to work. Dogs are viewed as a way to enhance the quality 
+            of your work life. In the employee code of conduct, Google has written an entire section on dogs. Any company focused on the
+             finer details that blur the distinction between the home and work environments is bound to get high marks on culture.
+<br>
+             While Google's office perks are great, it’s not just the benefits that make а great culture. It’s something else:
+              It’s the way management and teammates treat one another. That's what truly matters at the end of the day.
+
+
+        </p>
+
+    </div>
+
+    </header>
+    <script>
+        window.addEventListener('scroll',function(){
+           let navbar=document.getElementById('menu-bar');
+            if(window.pageYOffset>=176.82){
+              navbar.classList.add('sticky');
+            }
+            else{
+                navbar.classList.remove('sticky');
+            }
+        })
+    </script>
+</body>
+</html>
